@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.content{
+    padding: 1rem;
+}
+
+.pokemons{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    list-style: none;
+}
+
+.pokemons li{
+    margin: .5rem;
+    padding: 1rem;
+    background-color: #14A06F;
+    color: aliceblue;
+    height: 160px;
+}
