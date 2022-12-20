@@ -1,9 +1,13 @@
 const pokemonList = document.getElementById('pokemonList');
 const loadMoreButton = document.getElementById('loadMoreButton');
+const detailsPokemonList = document.getElementById('detailsPokemonList');
+const modal = document.getElementById('myModal');
+var span = document.getElementsByClassName("close")[0];
 
-const limit = 151;
+
+const limit = 10;
 let offset = 0;
-const maxRecords = 150;
+const maxRecords = 15;
 
 // mapeando cada item e unindo ao HTML com join
 
@@ -18,6 +22,13 @@ function loadPokemonItems(offset, limit){
                             ${pokemon.types.map((type) => `<li class="type ${type}" >${type}</li>`).join('')}
                         </ol>
                         <img src="${pokemon.photo}" alt="${pokemon.name}">
+                    </div>
+                    <div class='secondDetail'>
+                        <ol class="abilities">
+                            ${pokemon.abilities.map((ability) => `<li class="ability ${ability}" >${ability}</li>`).join('')}
+                        </ol>
+                        <span class="weight">Weight: ${pokemon.weight}</span>
+                        <span class="height">Height: ${pokemon.height}</span>
                     </div>
                 </li>
                 
@@ -45,7 +56,32 @@ loadMoreButton.addEventListener('click', () => {
     loadPokemonItems(offset, limit)
 })
 
+const detailsLista = document.getElementById('detailsPokemonList');
+
+console.log(detailsLista)
+
+var pokemonSelecionado;
+var clone;
+
 document.querySelector(".pokemons").addEventListener('click', function(e) {
-        console.log(e.target.parentElement.parentElement);
-    })
+    console.log(e.target.parentElement.parentElement)
+    // detailsPokemonList.innerHTML += e.target.parentElement.parentElement;
+
+    pokemonSelecionado = e.target.parentElement.parentElement;
+
+    clone = pokemonSelecionado.cloneNode(true);
+
     
+    detailsLista.appendChild(clone);
+    detailsLista.style.display = "block";
+    modal.style.display = "block";
+
+    })
+
+span.onclick = function() {
+        modal.style.display = "none";
+        detailsLista.removeChild(clone);
+        console.log(clone);
+    }    
+
+

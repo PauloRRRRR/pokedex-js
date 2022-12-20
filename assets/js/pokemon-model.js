@@ -4,4 +4,8 @@ class Pokemon {
     type;
     types = [];
     photo;
+    ability;
+    abilities = [];
+    weight;
+    height;
 }
