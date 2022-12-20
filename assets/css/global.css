@@ -15,7 +15,7 @@ body{
     padding: 1rem;
     background-color: #fff;
     height: 100vh;
-    height: 100vw;
+    width: 100vw;
 }
 
 .pokemons{
@@ -37,7 +37,7 @@ body{
 .water{
     background-color: #678fee;
 } 
-.eletric{
+.electric{
     background-color: #f7cf2e;
 } 
 .ice{
@@ -127,8 +127,8 @@ body{
 
 .pokemon .detail img{
     border-style: none;
-    max-width: 100%;
     height: 70px;
+    max-width: 100%;
 }
 
 .pagination button{
@@ -163,6 +163,7 @@ body{
         max-width: 768px;
     }
 }
+
 @media screen and (min-width: 992px){
     .content{
         max-width: 992px;
@@ -174,12 +175,13 @@ body{
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
+
 @media screen and (min-width: 576px){
     .pokemons{
         grid-template-columns: 1fr 1fr 1fr;
     }
 
     .content{
-        max-width: 576px;
+        min-width: 576px;
     }
 }
