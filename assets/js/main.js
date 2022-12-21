@@ -23,9 +23,9 @@ function loadPokemonItems(offset, limit){
                         </ol>
                         <img src="${pokemon.photo}" alt="${pokemon.name}">
                     </div>
-                    <div class='secondDetail'>
+                    <div class='secondDetail' style="display: none;">
                         <ol class="abilities">
-                            ${pokemon.abilities.map((ability) => `<li class="ability ${ability}" >${ability}</li>`).join('')}
+                            Abilities: ${pokemon.abilities.map((ability) => `<li class="ability ${ability}" >${ability}</li>`).join('')}
                         </ol>
                         <span class="weight">Weight: ${pokemon.weight}</span>
                         <span class="height">Height: ${pokemon.height}</span>
@@ -63,6 +63,8 @@ console.log(detailsLista)
 var pokemonSelecionado;
 var clone;
 
+var secondDetail = document.querySelector("li > div.secondDetail")
+
 document.querySelector(".pokemons").addEventListener('click', function(e) {
     console.log(e.target.parentElement.parentElement)
     // detailsPokemonList.innerHTML += e.target.parentElement.parentElement;
@@ -74,8 +76,9 @@ document.querySelector(".pokemons").addEventListener('click', function(e) {
     
     detailsLista.appendChild(clone);
     detailsLista.style.display = "block";
+    clone.querySelector("li > div.secondDetail").style.display = "block";
     modal.style.display = "block";
-
+    
     })
 
 span.onclick = function() {
