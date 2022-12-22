@@ -65,26 +65,33 @@ var clone;
 
 var secondDetail = document.querySelector("li > div.secondDetail")
 
+function hasClass(element, className) {
+    return element.className && new RegExp("(^|\\s)" + className + "(\\s|$)").test(element.className);
+}
+
 document.querySelector(".pokemons").addEventListener('click', function(e) {
-    console.log(e.target.parentElement.parentElement)
+    //console.log(e.target.parentElement.parentElement)
     // detailsPokemonList.innerHTML += e.target.parentElement.parentElement;
 
-    pokemonSelecionado = e.target.parentElement.parentElement;
-
-    clone = pokemonSelecionado.cloneNode(true);
-
+    if(hasClass(e.target.parentElement.parentElement, 'pokemon')) {
     
-    detailsLista.appendChild(clone);
-    detailsLista.style.display = "block";
-    clone.querySelector("li > div.secondDetail").style.display = "block";
-    modal.style.display = "block";
+        pokemonSelecionado = e.target.parentElement.parentElement;
+
+        clone = pokemonSelecionado.cloneNode(true);
+
+        
+        detailsLista.appendChild(clone);
+        detailsLista.style.display = "block";
+        clone.querySelector("li > div.secondDetail").style.display = "block";
+        modal.style.display = "block";
+    } 
     
-    })
+})
 
 span.onclick = function() {
-        modal.style.display = "none";
-        detailsLista.removeChild(clone);
-        console.log(clone);
-    }    
+    modal.style.display = "none";
+    detailsLista.removeChild(clone);
+//        console.log(clone);
+}    
 
 

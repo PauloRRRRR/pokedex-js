@@ -129,6 +129,7 @@ body{
     border-style: none;
     height: 70px;
     max-width: 100%;
+    cursor: pointer;
 }
 
 .pagination button{
@@ -139,6 +140,7 @@ body{
     background-color: #6c79db;
     border-radius: 1rem;
     border: none;
+    cursor: pointer;
 }
 .pagination{
     display: flex;
