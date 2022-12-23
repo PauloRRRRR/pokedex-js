@@ -172,17 +172,25 @@ body{
     border: 1px solid #888;
     width: 50%;
     background-color: inherit;
+    border-radius: 1rem;
+
 }
 
 #detailsPokemonList {
     width: 100%;
 
-}  
+}
+
+.pokemon .secondDetail{
+    margin: 1rem;
+
+}
 
 .pokemon .secondDetail .abilities{
     list-style: none;
     margin: 1rem;
     margin-left: 0;
+    margin-right: 10px;
 }
 
 .pokemon .secondDetail .abilities .ability{
@@ -193,11 +201,12 @@ body{
     border-radius: 1rem;
     filter: brightness(1.1);
     text-transform: capitalize;
+    
 }
 
 #detailsPokemonList > li > div.detail > img{
-    height: fit-content;
-    width: fit-content;
+    height: 130px;
+    width: 190px;
 }
 
 #detailsPokemonList {
@@ -213,6 +222,7 @@ body{
 
 #detailsPokemonList > li > span.number{
     font-size: larger;
+    margin-top: 1rem;
 }
   
   /* The Close Button */
@@ -221,6 +231,7 @@ body{
     float: right;
     font-size: 28px;
     font-weight: bold;
+    
 }
 
 .close:hover,
@@ -243,6 +254,7 @@ body{
     .content{
         max-width: 768px;
     }
+    
 }
 
 @media screen and (min-width: 992px){
@@ -265,4 +277,6 @@ body{
     .content{
         min-width: 576px;
     }
+    
+    
 }
