@@ -125,6 +125,9 @@ body{
     text-transform: capitalize;
 }
 
+.pokemon .detail img:hover{
+    transform: scale(1.2);
+}
 .pokemon .detail img{
     border-style: none;
     height: 70px;
@@ -137,11 +140,16 @@ body{
     margin: .25rem 0;
     font-size: .625rem;
     color: #fff;
-    background-color: #6c79db;
-    border-radius: 1rem;
+    background-color: #fff;
+    border-radius: 2rem;
     border: none;
     cursor: pointer;
 }
+
+.pagination button{
+    scale: 0.3;
+}
+
 .pagination{
     display: flex;
     flex-direction: row;
@@ -204,6 +212,10 @@ body{
     
 }
 
+#detailsPokemonList > li > div.detail > img:hover{
+    transform: scale(1);
+    cursor: default;
+}
 #detailsPokemonList > li > div.detail > img{
     height: 130px;
     width: 190px;
