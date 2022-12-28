@@ -9,6 +9,7 @@
 
 body{
    background-color: #f6f8fc;
+   background: url(/assets/img/container_bg.png);
 }
 
 .content{
@@ -140,10 +141,11 @@ body{
     margin: .25rem 0;
     font-size: .625rem;
     color: #fff;
-    background-color: #fff;
+    background-color: transparent;
     border-radius: 2rem;
     border: none;
     cursor: pointer;
+    transform: scale(.6);
 }
 
 .pagination button{
